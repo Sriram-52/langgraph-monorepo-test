@@ -1,0 +1,9 @@
+{
+  "name": "langgraph-monorepo-test",
+  "version": "1.0.0",
+  "private": true,
+  "packageManager": "pnpm@10.13.1",
+  "devDependencies": {
+    "prettier": "^3.6.2"
+  }
+}
