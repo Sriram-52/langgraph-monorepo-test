@@ -6,7 +6,7 @@ import { ToolNode } from "@langchain/langgraph/prebuilt";
 import { ConfigurationSchema, ensureConfiguration } from "./configuration.js";
 import { TOOLS } from "./tools.js";
 import { loadChatModel } from "./utils.js";
-import { hello } from "shared";
+import { userFields } from "shared";
 
 // Define the function that calls the model
 async function callModel(
@@ -75,4 +75,4 @@ export const graph = workflow.compile({
 	interruptAfter: [],
 });
 
-console.log(hello());
+console.log(userFields());
