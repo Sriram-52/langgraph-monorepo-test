@@ -5,19 +5,29 @@ export const prisma = new PrismaClient();
 export const userFields = () => prisma.user.fields;
 
 export const createUser = async (name: string, email: string) => {
-	const user = await prisma.user.create({
-		data: { name, email },
-	});
+	try {
+		const user = await prisma.user.create({
+			data: { name, email },
+		});
 
-	return user;
+		return user;
+	} catch (error) {
+		console.error(error);
+		return null;
+	}
 };
 
 export const getUser = async (id: string) => {
-	const user = await prisma.user.findUnique({
-		where: { id },
-	});
+	try {
+		const user = await prisma.user.findUnique({
+			where: { id },
+		});
 
-	return user;
+		return user;
+	} catch (error) {
+		console.error(error);
+		return null;
+	}
 };
 
 export const config = {
