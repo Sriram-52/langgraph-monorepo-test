@@ -1,18 +1,7 @@
 {
-  "node_version": "20",
-  "dockerfile_lines": [
-    "ADD . /deps/langgraph-monorepo-test",
-    "WORKDIR /deps/langgraph-monorepo-test",
-    "RUN npm install -g corepack@latest",
-    "RUN corepack enable",
-    "RUN --mount=type=cache,id=pnpm,target=/root/.local/share/pnpm/store pnpm install --frozen-lockfile",
-    "RUN pnpm --filter=db generate"
-  ],
-  "dependencies": [
-    "."
-  ],
+  "node_version": "22",
   "graphs": {
-    "agent": "./apps/agents/src/react_agent/graph.ts:graph"
+    "agent": "./src/react_agent/graph.ts:graph"
   },
   "env": ".env"
 }

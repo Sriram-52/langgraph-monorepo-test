@@ -2,14 +2,12 @@
   "name": "db",
   "version": "1.0.0",
   "description": "",
-  "main": "src/index.ts",
-  "exports": {
-    ".": "./src/index.ts"
-  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "type": "module",
   "scripts": {
     "db:push": "prisma db push",
-    "generate": "prisma generate"
+    "db:generate": "prisma generate && tsc"
   },
   "keywords": [],
   "author": "",
