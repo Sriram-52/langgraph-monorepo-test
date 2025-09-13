@@ -1,7 +1,7 @@
 {
   "node_version": "22",
   "graphs": {
-    "agent": "./apps/agent/src/react_agent/graph.ts:graph"
+    "agent": "./apps/agents/src/react_agent/graph.ts:graph"
   },
   "env": ".env"
 }
